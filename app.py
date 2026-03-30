@@ -7,6 +7,10 @@ from prophet import Prophet
 from sklearn.metrics import mean_absolute_error, mean_squared_error
 import math
 import os
+
+# Must be first Streamlit call.
+st.set_page_config(page_title="Sales Forecast Dashboard", layout="wide")
+
 # ----------------------------
 # Reduce top margin
 # ----------------------------
@@ -32,7 +36,6 @@ if not os.path.exists(DEMO_FILE):
 # ----------------------------
 # Streamlit Layout
 # ----------------------------
-st.set_page_config(page_title="Sales Forecast Dashboard", layout="wide")
 st.title("📊 Sales Forecast Dashboard with ARIMA and Prophet")
 
 # ----------------------------
